@@ -16,6 +16,7 @@ interface Props {
 const UserProvider: React.FC<Props> = ({ children }) => {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
+  
 
   return (
     <UserContext.Provider value={{ name, setName, email, setEmail }}>

@@ -1,17 +1,13 @@
 import React from 'react'
-import UserProvider  from './compon/Usecon'
-
+import Board from "./Tic-Tac-Toe/app"
 import './App.css'
-import UserCard from './compon/UserCard'
 
 function App() {
   
 
   return (
     <div>
-    <UserProvider >
-    <UserCard></UserCard>
-    </UserProvider >
+    <Board></Board>
     </div>
    
   )

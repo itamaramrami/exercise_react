@@ -2,12 +2,14 @@ import "./UserCard.css"
 import { useContext, useEffect } from "react";
 import { UserContext } from "./Usecon";
 import {useLocalStorage} from "./UseLocal"
+import  useCounter  from "./UseCounter";
 
 const UserCard = () => {
   
 
-  const [name, setName] = useLocalStorage<string>("userName", "");
-  const [email, setEmail] = useLocalStorage<string>("userEmail", "");
+  const {storedValue: name, setValue: setName} = useLocalStorage<string>("userName", "");
+  const {storedValue, setValue} = useLocalStorage<string>("userEmail", "");
+  const { countr, minus, plus, reset } = useCounter(5);
   
   useEffect(() => {
     if (email === "") return;
@@ -33,6 +35,14 @@ const UserCard = () => {
       <button onClick={() => console.log("Name:", name, "Email:", email)}>
         Print Data
       </button>
+
+      <br />
+      <br />
+      <br />
+      <h1>Counter: {countr}</h1>
+      <button onClick={plus}>+</button>
+      <button onClick={minus}>−</button>
+      <button onClick={reset}>אפס</button>
 
 
     </div>
