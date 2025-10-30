@@ -1,13 +1,17 @@
 import React from 'react'
-import Board from "./Tic-Tac-Toe/app"
+import {Game} from "./Tic-Tac-Toe/Game"
 import './App.css'
+import InputFocus from './compon/Useref'
+import UserCard from './compon/UserCard'
 
 function App() {
   
 
   return (
     <div>
-    <Board></Board>
+      {/* <UserCard></UserCard> */}
+    <Game></Game>
+    {/* <InputFocus></InputFocus> */}
     </div>
    
   )

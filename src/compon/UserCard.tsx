@@ -7,8 +7,8 @@ import  useCounter  from "./UseCounter";
 const UserCard = () => {
   
 
-  const {storedValue: name, setValue: setName} = useLocalStorage<string>("userName", "");
-  const {storedValue, setValue} = useLocalStorage<string>("userEmail", "");
+  const {val: name, setValue: setName} = useLocalStorage("userName", "");
+  const {val:email, setValue:setEmail} = useLocalStorage("userEmail", "");
   const { countr, minus, plus, reset } = useCounter(5);
   
   useEffect(() => {
